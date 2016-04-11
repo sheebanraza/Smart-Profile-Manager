@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.devatwork.sheebanraza.smartsoundprofiler.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="#fcfafa">
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/sss" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lat"
+        android:id="@+id/textView"
+        android:textColor="#0b0000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:layout_above="@+id/textView3"
+        android:layout_alignEnd="@+id/textView3"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/latitudeID"
+        android:gravity="center_horizontal"
+        android:textColor="#fb0303"
+        android:textStyle="bold"
+        android:textSize="32sp"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignEnd="@+id/textView2"
+        android:layout_toEndOf="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Long"
+        android:id="@+id/textView3"
+        android:textStyle="bold"
+        android:textSize="34sp"
+        android:textColor="#030000"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/longitudeID"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#12be03"
+        android:gravity="center_horizontal"
+        android:layout_above="@+id/add_title"
+        android:layout_alignStart="@+id/latitudeID"
+        android:layout_alignEnd="@+id/latitudeID" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Address"
+        android:id="@+id/add_title"
+        android:textColor="#060101"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/address"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#fc435e"
+        android:gravity="center_horizontal"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/add_title"
+        android:layout_above="@+id/silentZoneText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Smart Profile Manager"
+        android:id="@+id/textView2"
+        android:textStyle="bold"
+        android:textSize="@dimen/abc_action_bar_progress_bar_size"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/imageView"
+        android:textColor="#0f0101" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/silentZoneText"
+        android:layout_marginBottom="38dp"
+        android:textColor="#f50606"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
