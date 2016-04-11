@@ -22,7 +22,6 @@ import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
-import com.google.android.gms.location.places.PlaceTypes;
 
 import java.io.IOException;
 import java.util.HashSet;
@@ -31,8 +30,10 @@ import java.util.List;
 import se.walkercrou.places.GooglePlaces;
 import se.walkercrou.places.Place;
 
-import static android.widget.Toast.*;
+import static android.widget.Toast.LENGTH_SHORT;
+import static android.widget.Toast.makeText;
 import static com.devatwork.sheebanraza.smartsoundprofiler.SilentLocations.*;
+
 
 public class MainActivity extends AppCompatActivity implements LocationListener {
 
@@ -102,8 +103,6 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
             String add = address.getAddressLine(0) + address.getAddressLine(1) + address.getAddressLine(2);
             TextView addText = (TextView)findViewById(R.id.address);
             addText.setText(add);
-            textView.setText(String.valueOf("This place is a Silent Zone."));
-            new PlacesScan().changeSoundProfile();
             new PlacesScan().execute(add);
         } catch (IOException e) {
             e.printStackTrace();
